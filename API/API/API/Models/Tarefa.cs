@@ -1,12 +1,20 @@
-﻿namespace API.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
-public class Tarefa
+public class Aluno
 {
-    public string TarefaId { get; set; } = Guid.NewGuid().ToString();
-    public string? Titulo { get; set; }
-    public string? Descricao { get; set; }
-    public DateTime CriadoEm { get; set; } = DateTime.Now;
-    public Categoria? Categoria { get; set; }
-    public string? CategoriaId { get; set; }
-    public string? Status { get; set; } = "Não iniciada";
+    public int Id { get; set; }
+    public string? Nome { get; set; }
+    public string? CPF { get; set; }
+}
+
+public class IMC
+{
+    public int Id { get; set; }
+    public int? AlunoId { get; set; }
+    public Aluno? Aluno { get; set; }
+    public double? Altura { get; set; }
+    public double?Peso { get; set; }
+    public double? ValorIMC { get; set; }
+    public string? Classificacao { get; set; }
+    public DateTime? DataCriacao { get; set; } = DateTime.Now;
 }

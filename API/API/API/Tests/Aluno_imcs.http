@@ -1,0 +1,28 @@
+###Listar Aluno
+GET http://localhost:5000/aluno/listar
+###
+
+###Cadastar Aluno
+POST http://localhost:5000/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "João Silva",
+    "cpf": "123.456.789-00"
+}
+###
+
+###Listar IMC
+GET http://localhost:5000/imc/listar
+###
+
+###Cadastar IMC
+POST http://localhost:5000/imc/cadastrar
+Content-Type: application/json
+
+{
+    "alunoId": 1,
+    "altura": 1.75,
+    "peso": 70
+}
+###
